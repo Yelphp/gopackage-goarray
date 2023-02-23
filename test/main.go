@@ -1,9 +1,14 @@
-# gopackage-goarray
-像操作php的Array一样操作go的数组与map
+package main
 
-```
+import (
+	"fmt"
 
-// 创建一个map 对象
+	goarray "github.com/Yelphp/gopackage-goarray"
+)
+
+// 入口函数
+func main() {
+	// 创建一个map 对象
 	var maps = make(map[string]int)
 	// New 一个 goarray  ， 注意，创建maps 时已经确定了键值、值的数据类型
 	array := goarray.New(maps)
@@ -68,5 +73,4 @@
 	fmt.Printf("key:%v => value : %v  err %v\n", k, v, e)
 	// arr_goarray.SortKeyDesc()
 	fmt.Println(array)
-```
-
+}
